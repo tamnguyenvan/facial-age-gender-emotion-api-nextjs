@@ -48,7 +48,7 @@ def check_auth(f):
             return jsonify({"success": False, "error": "Authorization header is missing"}), 401
 
         # Uncomment the following lines when ready to implement full auth check
-        token = os.getenv("X-RapidAPI-Proxy-Secret")
+        token = os.getenv("API_KEY")
         if not auth_header == token:
             logger.warning(f"Invalid authorization header. IP: {request.remote_addr}")
             return jsonify({"success": False, "error": "Invalid authorization header"}), 401
