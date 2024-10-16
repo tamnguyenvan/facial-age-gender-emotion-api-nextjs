@@ -6,7 +6,12 @@ from flask import Flask, request, jsonify
 from PIL import Image
 import sys
 from pathlib import Path
-sys.path.insert(0, Path(__file__).parent)
+
+current_file = Path(__file__).resolve()
+parent_directory = current_file.parent
+sys.path.insert(0, str(parent_directory))
+
+sys.path.insert(0, parent_directory)
 from models.face import FaceAnalysisPipeline, ImageProcessingError
 import logging
 from functools import wraps
