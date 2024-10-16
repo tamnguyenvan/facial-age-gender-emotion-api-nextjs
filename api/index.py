@@ -4,6 +4,9 @@ import io
 from pathlib import Path
 from flask import Flask, request, jsonify
 from PIL import Image
+import sys
+from pathlib import Path
+sys.path.insert(0, Path(__file__).parent)
 from models.face import FaceAnalysisPipeline, ImageProcessingError
 import logging
 from functools import wraps
