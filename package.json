@@ -1,5 +1,5 @@
 {
-  "name": "flask2",
+  "name": "facial-age-gender-emotion-api",
   "version": "0.1.0",
   "private": true,
   "scripts": {
