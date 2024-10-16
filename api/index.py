@@ -11,7 +11,6 @@ current_file = Path(__file__).resolve()
 parent_directory = current_file.parent
 sys.path.insert(0, str(parent_directory))
 
-sys.path.insert(0, parent_directory)
 from models.face import FaceAnalysisPipeline, ImageProcessingError
 import logging
 from functools import wraps
