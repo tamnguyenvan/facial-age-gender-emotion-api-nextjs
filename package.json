@@ -1,11 +1,11 @@
 {
-  "name": "facial-age-gender-emotion-api",
+  "name": "next-flask",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "flask-dev": "pip3 install -r requirements.txt && python3 -m flask --app api/index run -p 5328",
     "next-dev": "next dev",
-    "dev": "concurrently \"npm run next-dev\" \"npm run flask-dev\"",
+    "dev": "concurrently \"pnpm run next-dev\" \"pnpm run flask-dev\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -16,6 +16,7 @@
     "@types/react-dom": "18.2.4",
     "concurrently": "^8.0.1",
     "next": "13.4.3",
+    "pnpm": "^9.12.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   }
