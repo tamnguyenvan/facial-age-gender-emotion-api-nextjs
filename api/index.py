@@ -151,6 +151,10 @@ def analyze_full():
     logger.info("Received request for full analysis")
     return process_request(face_analyzer.analyze_full)
 
+@app.route("/ping", methods=["GET", "POST"])
+def ping():
+    return "ok", 200
+
 if __name__ == "__main__":
     logger.info("Starting Flask application")
     app.run(debug=True)
