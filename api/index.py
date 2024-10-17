@@ -151,7 +151,7 @@ def analyze_full():
     logger.info("Received request for full analysis")
     return process_request(face_analyzer.analyze_full)
 
-@app.route(f"{version}/ping")
+@app.route(f"/{version}/ping")
 def ping():
     logger.info("Ping")
     return "ok", 200
